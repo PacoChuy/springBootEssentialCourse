@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Reuniones | Listado</title>
+</head>
+<body>
+<h1>Listado de Reuniones</h1>
+<ul>
+    <li th:ecah="reunion:${reuniones}">
+        <span th:text="${reunion.asusnto}">Asunto</span>
+        (<span th:text="${reunion.fecha}">Fecha</span>)
+    </li>
+</ul>
+</body>
+</html>
