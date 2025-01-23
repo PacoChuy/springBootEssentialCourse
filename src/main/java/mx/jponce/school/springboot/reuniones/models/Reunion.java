@@ -41,6 +41,7 @@ public class Reunion {
         return asistentes;
     }
     public void addAsistente(Persona asistente) {
+
         this.asistentes.add(asistente);
     }
 
