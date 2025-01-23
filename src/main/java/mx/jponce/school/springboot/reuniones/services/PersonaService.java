@@ -1,6 +1,7 @@
 package mx.jponce.school.springboot.reuniones.services;
 
 import mx.jponce.school.springboot.reuniones.models.Persona;
+import mx.jponce.school.springboot.reuniones.reuniones.data.PersonaRepositoy;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -9,13 +10,14 @@ import java.util.List;
 @Service
 public class PersonaService {
     private static final List<Persona> personas = new ArrayList<>();
-    static {
-        for (int i=0; i<5; i++){
-            Persona persona = new Persona(i,"Nombre"+ i,"Apellido" + i);
-            personas.add(persona);
-        }
+
+    private final PersonaRepositoy personaRepositoy;
+
+    public PersonaService(PersonaRepositoy personaRepositoy) {
+        this.personaRepositoy = personaRepositoy;
     }
+
     public List<Persona> getAllPersonas(){
-        return personas;
+        return personaRepositoy.findAll();
     }
 }
