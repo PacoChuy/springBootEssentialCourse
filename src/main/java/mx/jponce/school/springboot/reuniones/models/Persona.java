@@ -48,4 +48,12 @@ public class Persona {
         this.apellidos = apellidos;
     }
 
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                '}';
+    }
 }

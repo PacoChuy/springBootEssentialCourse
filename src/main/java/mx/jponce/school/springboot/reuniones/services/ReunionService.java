@@ -8,8 +8,7 @@ import java.util.List;
 
 @Service
 public class ReunionService {
-
- private final ReunionRepository reunionRepository;
+    private final ReunionRepository reunionRepository;
 
     public ReunionService(ReunionRepository reunionRepository) {
         this.reunionRepository = reunionRepository;
@@ -19,3 +18,4 @@ public class ReunionService {
         return reunionRepository.findAll();
     }
 }
+

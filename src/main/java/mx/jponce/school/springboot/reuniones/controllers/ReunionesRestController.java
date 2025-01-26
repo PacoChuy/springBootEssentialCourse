@@ -1,12 +1,12 @@
 package mx.jponce.school.springboot.reuniones.controllers;
 
-import java.util.List;
-
 import mx.jponce.school.springboot.reuniones.models.Reunion;
 import mx.jponce.school.springboot.reuniones.services.ReunionService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/reuniones")
