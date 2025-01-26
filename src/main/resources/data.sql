@@ -1,13 +1,16 @@
-INSERT INTO reunion (id, asunto, fecha) VALUES (1, 'Progreso personal', '2023-06-01');
-INSERT INTO reunion (id, asunto, fecha) VALUES (2, 'Seguimiento equipo', '2023-06-02');
-INSERT INTO reunion (id, asunto, fecha) VALUES (3, 'General', '2023-06-03');
+-- Reuniones
+INSERT INTO reunion (asunto, fecha) VALUES ('Progreso personal', '2023-06-01');
+INSERT INTO reunion (asunto, fecha) VALUES ('Seguimiento equipo', '2023-06-02');
+INSERT INTO reunion (asunto, fecha) VALUES ('General', '2023-06-03');
 
-INSERT INTO persona (id, nombre, apellidos) VALUES (1, 'Juan', 'Gómez');
-INSERT INTO persona (id, nombre, apellidos) VALUES (2, 'Marisa', 'López');
-INSERT INTO persona (id, nombre, apellidos) VALUES (3, 'Ana', 'Pérez');
-INSERT INTO persona (id, nombre, apellidos) VALUES (4, 'Luz', 'García');
-INSERT INTO persona (id, nombre, apellidos) VALUES (5, 'Jose', 'Ruiz');
+-- Personas
+INSERT INTO persona (nombre, apellidos) VALUES ('Juan', 'Gómez');
+INSERT INTO persona (nombre, apellidos) VALUES ('Marisa', 'López');
+INSERT INTO persona (nombre, apellidos) VALUES ('Ana', 'Pérez');
+INSERT INTO persona (nombre, apellidos) VALUES ('Luz', 'García');
+INSERT INTO persona (nombre, apellidos) VALUES ('Jose', 'Ruiz');
 
+-- Finalmente creamos las relaciones en la tabla asistente
 INSERT INTO asistente (reunion_id, persona_id) VALUES (1, 1);
 INSERT INTO asistente (reunion_id, persona_id) VALUES (1, 2);
 INSERT INTO asistente (reunion_id, persona_id) VALUES (2, 1);
